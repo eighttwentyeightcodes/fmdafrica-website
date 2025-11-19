@@ -1,0 +1,11 @@
+<svg width="200" height="100" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Three solid light cyan circles -->
+  <circle cx="25" cy="30" r="10" fill="#c6eff5"/>
+  <circle cx="50" cy="30" r="10" fill="#c6eff5"/>
+  <circle cx="75" cy="30" r="10" fill="#c6eff5"/>
+  <!-- Outline circle (play button) -->
+  <circle cx="100" cy="30" r="12" stroke="#c6eff5" stroke-width="2" fill="none"/>
+  <path d="M95 23 L110 30 L95 37 Z" fill="#c6eff5"/>
+  <!-- Text -->
+  <text x="140" y="55" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#c6eff5">fmdafrica</text>
+</svg>
