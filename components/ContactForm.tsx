@@ -58,7 +58,7 @@ export default function ContactForm() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <div className="bg-white/10 backdrop-blur-sm p-8">
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -91,7 +91,7 @@ export default function ContactForm() {
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            <div className="bg-white/10 backdrop-blur-sm p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Why Choose FMD Africa?</h3>
               <ul className="space-y-3 text-white/90">
                 <li className="flex items-center gap-2">
@@ -125,7 +125,7 @@ export default function ContactForm() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-2xl">
+            <form onSubmit={handleSubmit} className="bg-white p-8 shadow-2xl">
               <div className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">

@@ -80,7 +80,7 @@ export default function PortfolioPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 rounded-3xl overflow-hidden"
+                className="bg-gray-50 overflow-hidden"
               >
                 {/* Header */}
                 <div className={`bg-gradient-to-br ${index === 0 ? 'from-primary-500 to-primary-700' : 'from-accent-700 to-accent-900'} p-12 text-white`}>
@@ -109,7 +109,7 @@ export default function PortfolioPage() {
                     <h3 className="text-2xl font-bold mb-6 text-gray-900">Our Solution</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       {study.solution.map((item, i) => (
-                        <div key={i} className="flex items-start gap-3 bg-white p-4 rounded-xl">
+                        <div key={i} className="flex items-start gap-3 bg-white p-4">
                           <div className="w-8 h-8 bg-orange-400 rounded-full flex items-center justify-center flex-shrink-0">
                             <span className="text-white font-bold text-sm">{i + 1}</span>
                           </div>
@@ -126,7 +126,7 @@ export default function PortfolioPage() {
                       {study.results.map((result) => {
                         const Icon = result.icon
                         return (
-                          <div key={result.metric} className="bg-white p-6 rounded-2xl shadow-lg text-center">
+                          <div key={result.metric} className="bg-white p-6 shadow-lg text-center">
                             <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                               <Icon className="text-orange-400" size={24} />
                             </div>
@@ -139,7 +139,7 @@ export default function PortfolioPage() {
                   </div>
 
                   {/* Testimonial */}
-                  <div className="bg-white p-8 rounded-2xl border-l-4 border-orange-400">
+                  <div className="bg-white p-8 border-l-4 border-orange-400">
                     <p className="text-xl text-gray-700 italic mb-4">"{study.testimonial}"</p>
                     <p className="text-gray-900 font-bold">— {study.client}</p>
                   </div>

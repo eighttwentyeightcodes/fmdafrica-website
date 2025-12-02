@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import DownloadCVButton from '@/components/DownloadCVButton'
 import { motion } from 'framer-motion'
 import { Target, Lightbulb, Users, TrendingUp } from 'lucide-react'
 
@@ -16,21 +17,24 @@ export default function AboutPage() {
   const team = [
     {
       name: 'Victor Musyoka',
-      role: 'Founder & Digital Strategist',
-      responsibilities: 'Strategy, SEO, consulting, oversight, and client onboarding',
-      bio: 'Victor leads FMD Africa\'s strategic vision, bringing expertise in digital strategy and SEO to help businesses achieve measurable growth.'
+      role: 'Co-founder & Tech Lead',
+      responsibilities: 'Technical direction, web and product development, SEO strategy, and high-level consulting',
+      bio: 'Victor co-leads FMD Africa\'s vision and technology, bringing expertise in web development, product thinking, and SEO to help businesses achieve measurable growth.',
+      image: '/team/victor.jpg'
     },
     {
       name: 'Shalom Munene',
       role: 'Co-founder / CEO',
       responsibilities: 'Operations, client relations, reporting, and overall business management',
-      bio: 'Shalom oversees operations and client success, ensuring every partnership delivers exceptional results and strategic value.'
+      bio: 'Shalom oversees operations and client success, ensuring every partnership delivers exceptional results and strategic value.',
+      image: '/team/shalom-munene.jpg'
     },
     {
       name: 'Shalom Gatwiri',
       role: 'Social Media Manager',
       responsibilities: 'Content posting, scheduling, community management, analytics, and content rollout',
-      bio: 'Shalom manages day-to-day social media operations, engaging communities and executing content strategies that drive results.'
+      bio: 'Shalom manages day-to-day social media operations, engaging communities and executing content strategies that drive results.',
+      image: '/team/shalom-gatwiri.jpg'
     },
   ]
 
@@ -70,7 +74,7 @@ export default function AboutPage() {
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
                   alt="Team collaboration"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  className="shadow-2xl w-full h-auto"
                 />
               </motion.div>
               <motion.div
@@ -125,7 +129,7 @@ export default function AboutPage() {
                 <img
                   src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
                   alt="Digital strategy planning"
-                  className="rounded-2xl shadow-2xl w-full h-auto"
+                  className="shadow-2xl w-full h-auto"
                 />
               </motion.div>
             </div>
@@ -160,7 +164,7 @@ export default function AboutPage() {
                   transition={{ delay: index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center mx-auto mb-4">
                     <Icon className="text-white" size={28} />
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-gray-900">{value.title}</h3>
@@ -195,11 +199,19 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white p-8 shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white text-3xl font-bold">{member.name.charAt(0)}</span>
-                </div>
+                {member.image ? (
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-24 h-24 rounded-full object-cover mx-auto mb-6"
+                  />
+                ) : (
+                  <div className="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-white text-3xl font-bold">{member.name.charAt(0)}</span>
+                  </div>
+                )}
                 <h3 className="text-2xl font-bold mb-2 text-gray-900 text-center">{member.name}</h3>
                 <p className="text-orange-400 font-semibold mb-4 text-center">{member.role}</p>
                 <p className="text-sm text-gray-500 mb-4 italic">{member.responsibilities}</p>

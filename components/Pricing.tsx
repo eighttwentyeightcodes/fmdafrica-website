@@ -74,7 +74,7 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 ${
+              className={`relative bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 ${
                 pkg.popular ? 'ring-2 ring-orange-400 scale-105' : ''
               }`}
             >

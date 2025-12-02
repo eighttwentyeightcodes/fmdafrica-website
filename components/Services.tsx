@@ -53,6 +53,38 @@ const services = [
     details: ['Performance Analytics', 'Audience Insights', 'ROI Tracking', 'Custom Reports'],
     color: 'from-cyan-300 to-cyan-500',
   },
+  {
+    icon: Search,
+    title: 'AI Search Optimization',
+    description:
+      'Leverage AI to improve how customers discover your brand across search, on-site experiences, and content. We blend SEO best practices with AI-assisted research and optimization.',
+    details: ['AI-assisted keyword research', 'On-site search experience', 'Content optimization with AI', 'Search performance tracking'],
+    color: 'from-slate-700 to-primary-500',
+  },
+  {
+    icon: Target,
+    title: 'AI Business Automation',
+    description:
+      'Streamline repetitive tasks with AI workflows that support customer service, lead qualification, reporting, and internal operations.',
+    details: ['Workflow mapping', 'AI chatbot & assistant setup', 'Lead and inquiry routing', 'Reporting & follow-up automation'],
+    color: 'from-primary-500 to-emerald-500',
+  },
+  {
+    icon: Code,
+    title: 'MVP Development',
+    description:
+      'Design and build lean MVPs that validate your idea fast—combining strategy, UX, and no-code/low-code or custom builds where needed.',
+    details: ['Product scoping & strategy', 'MVP UX & interface design', 'Lean web/app builds', 'Launch & iteration support'],
+    color: 'from-emerald-500 to-primary-700',
+  },
+  {
+    icon: Megaphone,
+    title: 'Short-form Event Coverage',
+    description:
+      'Real-time short-form content coverage for events, launches, and experiences—optimized for Instagram, TikTok, and Reels.',
+    details: ['On-site content capture', 'Reels & TikTok editing', 'Live posting support', 'Post-event highlight packages'],
+    color: 'from-orange-500 to-primary-700',
+  },
 ]
 
 export default function Services() {
@@ -94,7 +126,7 @@ export default function Services() {
                 whileHover={{ scale: 1.05 }}
                 className="card group cursor-pointer"
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className="text-orange-400" size={32} />
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900">{service.title}</h3>

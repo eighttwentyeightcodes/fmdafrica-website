@@ -59,7 +59,7 @@ export default function FeaturedWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className="bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
             >
               <div className="bg-gradient-to-br from-cyan-400 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                 <div className="text-white text-6xl font-bold opacity-20">

@@ -1,7 +1,8 @@
-'use client'
+"use client"
 
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Check, ArrowRight } from 'lucide-react'
 
@@ -84,6 +85,58 @@ export default function ServicesPage() {
       color: 'from-accent-800 to-primary-400',
       premium: true
     },
+    {
+      title: 'AI Search Optimization',
+      description: 'Combine SEO best practices with AI intelligence to help the right customers discover you faster.',
+      includes: [
+        'AI-assisted keyword and topic research',
+        'Search intent and user journey mapping',
+        'On-page optimization with AI-assisted copy suggestions',
+        'Content gap and opportunity analysis',
+        'Ongoing performance monitoring & reporting',
+      ],
+      deliverables: ['AI-powered keyword sets', 'Optimized page recommendations', 'Content roadmap', 'Performance reports'],
+      color: 'from-slate-700 to-primary-500',
+    },
+    {
+      title: 'AI Business Automation',
+      description: 'Design and implement AI-powered workflows that save time on support, reporting, and lead management.',
+      includes: [
+        'Process and workflow discovery session',
+        'Automation & AI tool recommendations',
+        'Chatbot and assistant configuration',
+        'Lead routing and qualification flows',
+        'Reporting and follow-up automations',
+      ],
+      deliverables: ['Workflow diagrams', 'Automation setup', 'Playbooks & SOPs', 'Performance review session'],
+      color: 'from-primary-500 to-emerald-500',
+    },
+    {
+      title: 'MVP Development',
+      description: 'Turn your idea into a lean, testable product that can go to market quickly and validate demand.',
+      includes: [
+        'Strategy and product definition workshop',
+        'User flows and interface design',
+        'No-code/low-code or custom build implementation',
+        'Basic analytics and feedback loops',
+        'Launch support and iteration roadmap',
+      ],
+      deliverables: ['Clickable prototype or live MVP', 'Product requirements summary', 'Launch checklist', 'Iteration roadmap'],
+      color: 'from-emerald-500 to-primary-700',
+    },
+    {
+      title: 'Short-form Event Coverage',
+      description: 'Capture your events with social-ready short-form content that keeps your audience engaged in real time.',
+      includes: [
+        'On-site content capture (photo & video)',
+        'Reels, TikTok & Shorts concepts and shot lists',
+        'Same-day or next-day edits for key moments',
+        'Live posting support & coordination',
+        'Post-event highlight recap content',
+      ],
+      deliverables: ['Edited short-form videos', 'Photo selects', 'Event highlight reel', 'Publishing plan'],
+      color: 'from-orange-500 to-primary-700',
+    },
   ]
 
   return (
@@ -120,7 +173,7 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`${index % 2 === 0 ? '' : 'bg-gray-50'} rounded-3xl p-12`}
+                className={`${index % 2 === 0 ? '' : 'bg-gray-50'} p-12`}
               >
                 {service.premium && (
                   <span className="inline-block bg-orange-400 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
@@ -158,13 +211,13 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                <a
-                  href="#contact"
+                <Link
+                  href={{ pathname: '/quote', query: { service: service.title } }}
                   className="inline-flex items-center gap-2 bg-orange-400 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-500 transition-all shadow-lg hover:shadow-xl"
                 >
                   Get Started with {service.title}
                   <ArrowRight size={20} />
-                </a>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -186,13 +239,13 @@ export default function ServicesPage() {
             <p className="text-xl text-white/90 mb-8">
               Let's discuss how we can help your business grow
             </p>
-            <a
-              href="/contact"
+            <Link
+              href="/quote"
               className="inline-flex items-center gap-2 bg-orange-400 text-white px-8 py-4 rounded-full font-semibold hover:bg-orange-500 transition-all shadow-lg hover:shadow-xl"
             >
-              Book a Discovery Call
+              Get My Custom Quotation
               <ArrowRight size={20} />
-            </a>
+            </Link>
           </motion.div>
         </div>
       </section>

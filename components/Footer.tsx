@@ -1,6 +1,7 @@
 'use client'
 
-import { Instagram, Linkedin, Mail, MessageCircle } from 'lucide-react'
+import { Instagram, Linkedin, Mail } from 'lucide-react'
+import WhatsAppIcon from '@/components/icons/WhatsApp'
 import { motion } from 'framer-motion'
 
 export default function Footer() {
@@ -60,7 +61,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a href="https://wa.me/254113064648" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-400 transition-colors">
-                <MessageCircle size={20} />
+                <WhatsAppIcon size={20} />
               </a>
               <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-orange-400 transition-colors">
                 <Linkedin size={20} />
@@ -84,11 +85,11 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#about" className="hover:text-orange-400 transition-colors">About Us</a></li>
-              <li><a href="#results" className="hover:text-orange-400 transition-colors">Featured Work</a></li>
-              <li><a href="#testimonials" className="hover:text-orange-400 transition-colors">Testimonials</a></li>
-              <li><a href="#pricing" className="hover:text-orange-400 transition-colors">Pricing</a></li>
-              <li><a href="#contact" className="hover:text-orange-400 transition-colors">Contact</a></li>
+              <li><a href="/about" className="hover:text-orange-400 transition-colors">About Us</a></li>
+              <li><a href="/#results" className="hover:text-orange-400 transition-colors">Featured Work</a></li>
+              <li><a href="/#testimonials" className="hover:text-orange-400 transition-colors">Testimonials</a></li>
+              <li><a href="/#pricing" className="hover:text-orange-400 transition-colors">Pricing</a></li>
+              <li><a href="/#contact" className="hover:text-orange-400 transition-colors">Contact</a></li>
             </ul>
           </div>
 

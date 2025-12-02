@@ -103,7 +103,7 @@ export default function Hero() {
             className="grid grid-cols-3 gap-8 mt-20 max-w-2xl mx-auto"
           >
             {[
-              { number: '500+', label: 'Clients Served' },
+              { number: '50+', label: 'Clients' },
               { number: '250%', label: 'Avg ROI Increase' },
               { number: '98%', label: 'Client Satisfaction' },
             ].map((stat, index) => (

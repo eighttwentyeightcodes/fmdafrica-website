@@ -4,7 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ContactForm from '@/components/ContactForm'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock, MessageCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock } from 'lucide-react'
+import WhatsAppIcon from '@/components/icons/WhatsApp'
 
 export default function ContactPage() {
   return (
@@ -39,7 +40,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-center p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow"
+                className="text-center p-8 bg-gray-50 hover:shadow-lg transition-shadow"
               >
                 <div className="w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className="text-white" size={28} />
@@ -55,7 +56,7 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-center p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow"
+                className="text-center p-8 bg-gray-50 hover:shadow-lg transition-shadow"
               >
                 <div className="w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Phone className="text-white" size={28} />
@@ -74,10 +75,10 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="text-center p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow"
+                className="text-center p-8 bg-gray-50 hover:shadow-lg transition-shadow"
               >
                 <div className="w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MessageCircle className="text-white" size={28} />
+                  <WhatsAppIcon className="text-white" size={28} />
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-900">WhatsApp</h3>
                 <a 
@@ -95,7 +96,7 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="text-center p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow"
+                className="text-center p-8 bg-gray-50 hover:shadow-lg transition-shadow"
               >
                 <div className="w-16 h-16 bg-orange-400 rounded-full flex items-center justify-center mx-auto mb-4">
                   <MapPin className="text-white" size={28} />

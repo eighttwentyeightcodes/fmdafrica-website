@@ -90,7 +90,7 @@ export default function FAQPage() {
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full bg-gray-50 hover:bg-gray-100 rounded-2xl p-6 text-left transition-all"
+                  className="w-full bg-gray-50 hover:bg-gray-100 p-6 text-left transition-all"
                 >
                   <div className="flex items-center justify-between">
                     <h3 className="text-xl font-bold text-gray-900 pr-8">{faq.question}</h3>

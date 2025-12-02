@@ -98,7 +98,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.6 + index * 0.1 }}
-              className="text-center p-6 bg-white/10 rounded-2xl backdrop-blur-sm hover:bg-cyan-500/20 transition-all duration-300"
+              className="text-center p-6 bg-white/10 backdrop-blur-sm hover:bg-cyan-500/20 transition-all duration-300"
             >
               <div className="text-4xl md:text-5xl font-bold text-cyan-200 mb-2">{stat.number}</div>
               <div className="text-cyan-100">{stat.label}</div>

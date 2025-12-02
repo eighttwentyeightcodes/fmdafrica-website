@@ -1,6 +1,7 @@
-'use client'
+"use client"
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { TrendingUp, Target, Zap, Users, MessageSquare, ArrowRight } from 'lucide-react'
 
 export default function WhyChoose() {
@@ -8,27 +9,32 @@ export default function WhyChoose() {
     {
       icon: TrendingUp,
       title: 'Data-driven',
-      description: 'Every decision backed by analytics and insights'
+      description: 'Every decision backed by analytics and insights',
+      href: '/blog/data-driven',
     },
     {
       icon: Target,
       title: 'Consistent execution',
-      description: 'Reliable delivery and strategic implementation'
+      description: 'Reliable delivery and strategic implementation',
+      href: '/blog/consistent-execution',
     },
     {
       icon: Zap,
       title: 'High-performing content',
-      description: 'Content that engages, converts, and grows your brand'
+      description: 'Content that engages, converts, and grows your brand',
+      href: '/blog/high-performing-content',
     },
     {
       icon: Users,
       title: 'Personalized strategy',
-      description: 'Tailored solutions for your unique business goals'
+      description: 'Tailored solutions for your unique business goals',
+      href: '/blog/personalized-strategy',
     },
     {
       icon: MessageSquare,
       title: 'Clear communication',
-      description: 'Transparent reporting and regular updates'
+      description: 'Transparent reporting and regular updates',
+      href: '/blog/clear-communication',
     },
   ]
 
@@ -66,13 +72,15 @@ export default function WhyChoose() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl hover:bg-cyan-50 transition-all duration-300 group"
+                className="bg-white p-0 shadow-lg hover:shadow-xl hover:bg-cyan-50 transition-all duration-300 group cursor-pointer"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Icon className="text-white" size={28} />
-                </div>
-                <h3 className="text-2xl font-bold mb-3 text-gray-900">{reason.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{reason.description}</p>
+                <Link href={reason.href} className="block h-full p-8">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="text-white" size={28} />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-3 text-gray-900">{reason.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{reason.description}</p>
+                </Link>
               </motion.div>
             )
           })}
