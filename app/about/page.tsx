@@ -17,14 +17,14 @@ export default function AboutPage() {
   const team = [
     {
       name: 'Victor Musyoka',
-      role: 'Co-founder & Tech Lead',
+      role: 'Co-founder/tech lead',
       responsibilities: 'Technical direction, web and product development, SEO strategy, and high-level consulting',
       bio: 'Victor co-leads FMD Africa\'s vision and technology, bringing expertise in web development, product thinking, and SEO to help businesses achieve measurable growth.',
       image: '/team/victor.jpg'
     },
     {
       name: 'Shalom Munene',
-      role: 'Co-founder / CEO',
+      role: 'Co-founder/comms lead',
       responsibilities: 'Operations, client relations, reporting, and overall business management',
       bio: 'Shalom oversees operations and client success, ensuring every partnership delivers exceptional results and strategic value.',
       image: '/team/shalom-munene.jpg'
