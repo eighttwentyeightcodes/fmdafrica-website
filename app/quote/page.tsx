@@ -3,6 +3,8 @@ import Footer from '@/components/Footer'
 import { Suspense } from 'react'
 import QuoteClient from './QuoteClient'
 
+export const dynamic = 'force-dynamic'
+
 type QuotePageProps = {
   searchParams?: { [key: string]: string | string[] | undefined }
 }
